@@ -173,10 +173,3 @@ Applies to all IT administrators responsible for account creation and user provi
 |------------|------------------|----------------------|
 | 2025-06-28 | Craig Sheffield  | Initial documentation |
 
----
-
-## 📎 Appendix (Optional)
-- Sample screenshots (`/images`)
-- CLI equivalents (PowerShell / Graph API)
-- Link to Microsoft Learn: [User Management in Microsoft 365](https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/add-users)
-
