@@ -1,17 +1,18 @@
 # Onboarding SOP—Microsoft 365 & Entra ID
 
-This repository houses a **Standard Operating Procedure (SOP)** template structure for all SOPs and an example process for onboarding new users in Microsoft 365 and Entra ID. It demonstrates:
+This repository houses a **Standard Operating Procedure (SOP)** template structure for all SOPs and an example process for onboarding new users in Microsoft 365 and Entra ID. Additionally, there are troubleshooting issues that occured along with suggested resolution steps to resolve the issues. It demonstrates:
 
 - Foundational IT operations skills
 - Process documentation best practices
 - Security- and compliance-conscious user provisioning
+- Troubleshooting documentation, steps, and resolutions
 
 ---
 
 ## 🔧 Contents
 
-- [SOP Template Structure](https://github.com/ideafieldpro/onboarding-SOP-MS365/main/README.md#-sop-template-structure)
-- [Flow of the onboarding process](https://github.com/ideafieldpro/onboarding-SOP-MS365/main/README.md#-onboarding-flow-diagram)
+- SOP Template Structure
+- Flow of the onboarding process
 - [Example SOP documentation](https://github.com/ideafieldpro/onboarding-SOP-MS365/blob/main/README.md#-standard-operating-procedure-sop-onboarding-a-new-user-in-microsoft-365-and-entra-id)
 - [Troubleshooting](https://github.com/ideafieldpro/onboarding-SOP-MS365/blob/main/README.md#%EF%B8%8F-troubleshooting-scenarios)
 
@@ -22,12 +23,6 @@ This repository houses a **Standard Operating Procedure (SOP)** template structu
 - Clear, step-by-step guidance aligned with enterprise workflows  
 - Includes troubleshooting tips for common issues  
 - Change history is versioned for transparency
-
----
-
-## ✅ Usage
-
-Feel free to review or adapt for your own M365 environments.  
 
 ---
 
@@ -105,16 +100,21 @@ Applies to all IT administrators responsible for account creation and user provi
   - Username (e.g., j.doe@company.onmicrosoft.com)
 - Choose to **auto-generate a password** or set a secure custom password.
 - Enable the option to require a password change on first sign-in.
+![brave_Afg4QDQJpl](https://github.com/user-attachments/assets/fcec777c-48c4-436b-8208-fbeb7ad07e8d)
 
 ---
 
 ### 3. Assign Licenses
 - Select the appropriate Microsoft 365 license (e.g., E3 or E5).
 - Enable key services:
-  - Outlook
+  - Entra ID/Azure Active DIrectory
+  - Exchange Online
+  - Microsoft 365 Apps for Business
+  - Intune
   - OneDrive
   - Teams
   - SharePoint
+![brave_nlxznNoWHN](https://github.com/user-attachments/assets/df88dea7-e894-4f61-83ed-f4b298840e2f)
 
 ---
 
@@ -122,6 +122,7 @@ Applies to all IT administrators responsible for account creation and user provi
 - Under “Roles,” assign:
   - Standard user (default)  
   - Admin roles if applicable (e.g., Helpdesk Admin, User Admin)
+![brave_UFJ1GNcith](https://github.com/user-attachments/assets/02b16a96-811a-418c-9409-4abb7dc03715)
 
 ---
 
@@ -129,6 +130,7 @@ Applies to all IT administrators responsible for account creation and user provi
 - Open **Entra ID portal**: https://entra.microsoft.com  
 - Go to `Users > Select user > Authentication methods`
 - Require user to **register for multi-factor authentication**.
+![brave_UYxAUF4Vm4](https://github.com/user-attachments/assets/f4ec3889-8a7f-4dc1-8030-d8144a7f9530)
 
 ---
 
@@ -136,7 +138,7 @@ Applies to all IT administrators responsible for account creation and user provi
 - Still in Entra ID:
   - Navigate to `Groups > Add to group`
   - Add the user to security groups (e.g., Marketing, IT Support)
-  - Add to Microsoft Teams via Teams Admin Center or app
+![brave_FzWTu4Jrv6](https://github.com/user-attachments/assets/8e48b5b1-07b2-488a-af76-432700adc96f)
 
 ---
 
