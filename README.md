@@ -13,7 +13,7 @@ This repository houses a **Standard Operating Procedure (SOP)** template structu
 - [SOP Template Structure](https://github.com/ideafieldpro/onboarding-SOP-MS365/main/README.md#-sop-template-structure)
 - [Flow of the onboarding process](https://github.com/ideafieldpro/onboarding-SOP-MS365/main/README.md#-onboarding-flow-diagram)
 - [Example SOP documentation](https://github.com/ideafieldpro/onboarding-SOP-MS365/main/README.md#-standard-operating-procedure-sop-onboarding-a-new-user-in-microsoft-365-and-entra-id)
-- [Troubleshooting](https://github.com/ideafieldpro/onboarding-SOP-MS365/main/README.md#%EF%B8%8F-troubleshooting-scenarios)
+- [Troubleshooting](https://github.com/ideafieldpro/onboarding-SOP-MS365/blob/main/README.md#%EF%B8%8F-troubleshooting-scenarios)
 
 ---
 
