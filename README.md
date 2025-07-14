@@ -10,9 +10,10 @@ This repository houses a **Standard Operating Procedure (SOP)** template structu
 
 ## 🔧 Contents
 
-- SOP Template Structure
-- Flow diagram of the onboarding process
-- Example SOP documentation
+- [SOP Template Structure](https://github.com/ideafieldpro/onboarding-SOP-MS365/edit/main/README.md#-sop-template-structure)
+- [Flow of the onboarding process](https://github.com/ideafieldpro/onboarding-SOP-MS365/edit/main/README.md#-onboarding-flow-diagram)
+- [Example SOP documentation](https://github.com/ideafieldpro/onboarding-SOP-MS365/edit/main/README.md#-standard-operating-procedure-sop-onboarding-a-new-user-in-microsoft-365-and-entra-id)
+- [Troubleshooting](https://github.com/ideafieldpro/onboarding-SOP-MS365/edit/main/README.md#%EF%B8%8F-troubleshooting-scenarios)
 
 ---
 
@@ -172,4 +173,75 @@ Applies to all IT administrators responsible for account creation and user provi
 | Date       | Author           | Notes                |
 |------------|------------------|----------------------|
 | 2025-06-28 | Craig Sheffield  | Initial documentation |
+
+---
+
+## 🛠️ Troubleshooting Scenarios
+
+Real-world issues encountered during device onboarding and how they were resolved.
+
+---
+
+### 🔐 1. User Unable to Log In — No Password Set
+
+**Problem**  
+After creating a new Microsoft 365 user, the Windows 10 VM asked for the user's password. However, the user never set one and could not log in.
+
+**Cause**  
+By default, Microsoft 365 cloud-only users are assigned random temporary passwords if one isn’t set manually.
+
+**Solution**
+1. Go to [https://admin.microsoft.com](https://admin.microsoft.com)
+2. Navigate to **Users > Active Users > [User]**
+3. Click **Reset password**
+4. Set a known password and uncheck “Require user to change password at next login” (for test use)
+5. Use the email and new password to sign in on the Windows 10 device
+![brave_70FQH7bG8X](https://github.com/user-attachments/assets/b94603d1-79d0-4246-826b-b61f72894484)
+
+---
+
+### 🔒 2. Blocked During MFA Registration
+
+**Problem**  
+During sign-in, user is prompted to set up additional security info but sees an error:
+
+> _"Your sign-in was blocked. Your organization requires this information to be set from specific locations or devices."_
+
+**Cause**  
+A Conditional Access policy in Entra ID restricts MFA registration to known/trusted devices or locations.
+
+**Solution**
+1. Go to [https://entra.microsoft.com](https://entra.microsoft.com)
+2. Navigate to **Protection > Conditional Access**
+3. Locate and **disable or modify** the MFA registration policy
+   - OR exclude the test user
+   - OR allow registration from **Any location**
+4. Retry MFA registration or complete it on a trusted device
+<img width="1878" height="1015" alt="brave_Oembsi5BJq" src="https://github.com/user-attachments/assets/f094b71f-f981-4001-bd9c-fb7f43a132e3" />
+
+---
+
+### 📧 3. Outlook Desktop Says "Account Not Supported"
+
+**Problem**  
+After device onboarding, Outlook on the Windows 10 VM shows:
+
+> _"This account is not supported. Your account does not have permissions to access the new Outlook on Windows."_
+
+**Cause**
+- The "New Outlook" preview UI has limited support for certain Microsoft 365 accounts
+- Exchange Online might not be enabled in the license
+- Microsoft 365 Business Basic only supports Outlook Web
+
+**Solutions**
+✅ **Check if Mailbox is Working**
+- Login at [https://outlook.office.com](https://outlook.office.com)  
+- If mail loads, the issue is Outlook, not the mailbox
+
+✅ **Switch to Classic Outlook**
+- Disable "New Outlook" in the Outlook UI toggle
+- Restart and re-add the account
+
+✅ **Check License in Admin Center**
+- Confirm user has Microsoft 365 license with **Exchange Online** and **Outlook desktop** services enabled
 
